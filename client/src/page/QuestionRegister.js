@@ -69,6 +69,7 @@ export default function QuestionRegister() {
 
     if (title === '') setIsTitleEmpty(true);
     if (body === '') setIsBodyEmpty(true);
+    console.log(tagsList);
 
     if (!isTitleEmpty && !isBodyEmpty) {
       QuestionRegister();
@@ -92,7 +93,7 @@ export default function QuestionRegister() {
         {
           title: title,
           content: body,
-          tag: tagsList.join(','),
+          tag: tagsList,
         },
         {
           headers: {
